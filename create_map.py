@@ -8,7 +8,7 @@ char = {
     "full": "x",
 }
 
-def create_map(x: int, y: int, density: int, nbr_map: int = 0, char: dict = {"empty": ".", "obstacle": "o", "full": "x",}):
+def create_map(x: int, y: int, density: int, nbr_map: int = 1, char: dict = {"empty": ".", "obstacle": "o", "full": "x",}):
     for i in range(nbr_map):
         with open(f"maps/map{i}", "w") as f:
             f.write(f"{y}{char['empty']}{char['obstacle']}{char['full']}\n")

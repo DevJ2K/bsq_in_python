@@ -5,8 +5,8 @@ from find_bsq import *
 from create_map import *
 
 # nbr_de_map = int(input("Combien de maps souhaitez-vous générer ? :"))
-x = 10
-y = 10
+x = 13
+y = 13
 d = 1
 create_map(x, y, d)
 mapfile = "maps/map0"
