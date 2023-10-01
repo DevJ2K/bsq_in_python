@@ -1,15 +1,21 @@
 from get_map import *
 from show_map import *
+from is_valid import *
 from find_bsq import *
+from create_map import *
 
-mapfile = "map.txt"
+# nbr_de_map = int(input("Combien de maps souhaitez-vous générer ? :"))
+x = 10
+y = 10
+d = 1
+create_map(x, y, d)
+mapfile = "maps/map0"
 map = get_full_map(mapfile)
-info_map = get_info_map(map)
-x = 1
-y = 1
-l = 4
-if is_valid_square(map, x, y, l):
-    map_replace = replace_by_square(map, x, y, l)
+if (map_is_valid(map)):
+    info_map = get_info_map(map)
+    answer = algorithm_to_find(map)
+    map_replace = replace_by_square(map, answer["x"], answer["y"], answer["l"])
+    compare_map([map, map_replace])
+    print(answer)
 else:
-    map_replace = map
-compare_map([map, map_replace])
+    print("map error")

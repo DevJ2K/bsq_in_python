@@ -37,22 +37,13 @@ def algorithm_to_find(map: list):
 					l += 1
 			except:
 				pass
-				#print("erreur")
 
 	return ({"x": x, "y": y, "l": l - 1})
 
 if __name__ == "__main__":
 	map = get_full_map("map.txt")
-	x = 0
-	y = 0
-	l = 5
 	show_map(map)
 	answer = algorithm_to_find(map)
 	print(answer)
 	map_replace = replace_by_square(map, answer["x"], answer["y"], answer["l"])
 	compare_map([map, map_replace])
-	# if is_valid_square(map, x, y, l):
-	# 	map_replace = replace_by_square(map, x, y, l)
-	# else:
-	# 	map_replace = map
-	# compare_map([map, map_replace])
