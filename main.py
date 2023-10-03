@@ -66,9 +66,9 @@ def show_my_maps():
         mapfile = f"maps/map{num_map}"
         map = get_full_map(mapfile)
         i_map = get_info_map(map)
-        space_dimensions = 11 - len(f"[{i_map['nbr_lines']}x{len(map) - 1}]")
+        space_dimensions = 11 - len(f"[{i_map['nbr_lines']}x{len(map[1])}]")
         space_num_map = 3 - len(str(num_map))
-        print(f"{num_map}{' ' * space_num_map}| [{i_map['nbr_lines']}x{len(map) - 1}]{' ' * space_dimensions}| [{i_map['empty']}{i_map['obstacle']}{i_map['full']}]")
+        print(f"{num_map}{' ' * space_num_map}| [{i_map['nbr_lines']}x{len(map[1])}]{' ' * space_dimensions}| [{i_map['empty']}{i_map['obstacle']}{i_map['full']}]")
         num_map += 1
     try:
         all_colors = ["bright_black", "black", "bright_red", "red", "bright_green", 
