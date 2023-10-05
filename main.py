@@ -35,7 +35,7 @@ def generate_map():
         nbr_lines = int(input("Nombre de lignes : "))
         nbr_column = int(input("Longueur des lignes : "))
         density = int(input("Densité d'obstacles : "))
-        char = input("Charactères utilisées {ex.: '.ox'} : ")
+        char = input("Caractères utilisés {ex.: '.ox'} : ")
         num_map = create_map(nbr_column, nbr_lines, density, {"empty": char[0], "obstacle": char[1], "full": char[2]})
         show_map(get_full_map(f"maps/map{num_map}"))
         succes = typer.style("succès", fg="bright_green")
